@@ -96,8 +96,8 @@ public class RecipeBootstrap  implements ApplicationListener<ContextRefreshedEve
 
 
         guacRecipe.setNotes(guacNotes);
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("Naso", new BigDecimal(2), eachUom));
+        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom,guacRecipe));
+        guacRecipe.getIngredients().add(new Ingredient("Naso", new BigDecimal(2), eachUom,guacRecipe));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
@@ -117,8 +117,8 @@ public class RecipeBootstrap  implements ApplicationListener<ContextRefreshedEve
 
 
         tacRecipe.setNotes(tacNotes);
-        tacRecipe.getIngredients().add(new Ingredient("ripe dude", new BigDecimal(2), eachUom));
-        tacRecipe.getIngredients().add(new Ingredient("Naso bighead", new BigDecimal(2), eachUom));
+        tacRecipe.getIngredients().add(new Ingredient("ripe dude", new BigDecimal(2), eachUom,tacRecipe));
+        tacRecipe.getIngredients().add(new Ingredient("Naso bighead", new BigDecimal(2), eachUom,tacRecipe));
 
         tacRecipe.getCategories().add(americanCategory);
         tacRecipe.getCategories().add(mexicanCategory);

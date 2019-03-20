@@ -2,12 +2,15 @@ package tive.recipe.tiverecipe.domain;
 
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 @Slf4j
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Ingredient {
@@ -22,11 +25,10 @@ public class Ingredient {
     @ManyToOne
     private Recipe recipe;
 
-    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure) {
-        log.debug("I got here.Constructor");
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure, Recipe recipe) {
         this.description = description;
         this.amount = amount;
         this.unitOfMeasure = unitOfMeasure;
+        this.recipe = recipe;
     }
-
 }
