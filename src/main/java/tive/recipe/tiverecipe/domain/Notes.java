@@ -1,17 +1,18 @@
 package tive.recipe.tiverecipe.domain;
 
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+/**
+ * Created by jt on 6/13/17.
+ */
+@Data
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Notes {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,6 +22,5 @@ public class Notes {
 
     @Lob
     private String recipeNotes;
-
 
 }

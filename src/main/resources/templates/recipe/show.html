@@ -89,8 +89,9 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <ul th:each="ingredient : ${ingredients}">
-                                    <li th:text="${ingredient.description}">1 Cup of milk</li>
+                                <!--/*@thymesVar id="recipe" type="tive.recipe.tiverecipe.domain.Recipe"*/-->
+                                <ul th:each="recipe : ${recipe.ingredients}">
+                                    <li th:text="${recipe.description}">1 Cup of milk</li>
 
                                 </ul>
                             </div>
