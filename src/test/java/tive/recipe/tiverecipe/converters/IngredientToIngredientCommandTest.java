@@ -1,16 +1,16 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.domain.Ingredient;
-import guru.springframework.domain.Recipe;
-import guru.springframework.domain.UnitOfMeasure;
+
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.IngredientCommand;
+import tive.recipe.tiverecipe.domain.Ingredient;
+import tive.recipe.tiverecipe.domain.Recipe;
+import tive.recipe.tiverecipe.domain.UnitOfMeasure;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by jt on 6/21/17.
@@ -53,7 +53,7 @@ public class IngredientToIngredientCommandTest {
         //when
         IngredientCommand ingredientCommand = converter.convert(ingredient);
         //then
-        assertNull(ingredientCommand.getUnitOfMeasure());
+        assertNull(ingredientCommand.getUom());
         assertEquals(ID_VALUE, ingredientCommand.getId());
        // assertEquals(RECIPE, ingredientCommand.get);
         assertEquals(AMOUNT, ingredientCommand.getAmount());
@@ -77,8 +77,8 @@ public class IngredientToIngredientCommandTest {
         IngredientCommand ingredientCommand = converter.convert(ingredient);
         //then
         assertEquals(ID_VALUE, ingredientCommand.getId());
-        assertNotNull(ingredientCommand.getUnitOfMeasure());
-        assertEquals(UOM_ID, ingredientCommand.getUnitOfMeasure().getId());
+        assertNotNull(ingredientCommand.getUom());
+        assertEquals(UOM_ID, ingredientCommand.getUom().getId());
         // assertEquals(RECIPE, ingredientCommand.get);
         assertEquals(AMOUNT, ingredientCommand.getAmount());
         assertEquals(DESCRIPTION, ingredientCommand.getDescription());

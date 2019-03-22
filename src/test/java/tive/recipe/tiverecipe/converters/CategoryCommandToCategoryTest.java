@@ -1,12 +1,11 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.CategoryCommand;
-import guru.springframework.domain.Category;
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.CategoryCommand;
+import tive.recipe.tiverecipe.domain.Category;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class CategoryCommandToCategoryTest {
 

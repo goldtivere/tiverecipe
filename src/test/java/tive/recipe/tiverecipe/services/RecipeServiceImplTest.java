@@ -1,14 +1,14 @@
 package tive.recipe.tiverecipe.services;
 
 
-import guru.springframework.converters.RecipeCommandToRecipe;
-import guru.springframework.converters.RecipeToRecipeCommand;
-import guru.springframework.domain.Recipe;
-import guru.springframework.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import tive.recipe.tiverecipe.converters.RecipeCommandToRecipe;
+import tive.recipe.tiverecipe.converters.RecipeToRecipeCommand;
+import tive.recipe.tiverecipe.domain.Recipe;
+import tive.recipe.tiverecipe.repositories.RecipeRepository;
 
 import java.util.HashSet;
 import java.util.Optional;

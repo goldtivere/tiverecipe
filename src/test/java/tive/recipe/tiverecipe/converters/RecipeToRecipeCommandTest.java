@@ -1,12 +1,11 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.domain.*;
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.RecipeCommand;
+import tive.recipe.tiverecipe.domain.*;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class RecipeToRecipeCommandTest {
 

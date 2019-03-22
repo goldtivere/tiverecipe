@@ -1,12 +1,12 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.NotesCommand;
-import guru.springframework.domain.Notes;
+
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.NotesCommand;
+import tive.recipe.tiverecipe.domain.Notes;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by jt on 6/21/17.

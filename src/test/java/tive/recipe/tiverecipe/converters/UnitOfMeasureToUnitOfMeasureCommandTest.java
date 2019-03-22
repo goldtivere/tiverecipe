@@ -1,12 +1,12 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.UnitOfMeasureCommand;
-import guru.springframework.domain.UnitOfMeasure;
+
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.UnitOfMeasureCommand;
+import tive.recipe.tiverecipe.domain.UnitOfMeasure;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by jt on 6/21/17.

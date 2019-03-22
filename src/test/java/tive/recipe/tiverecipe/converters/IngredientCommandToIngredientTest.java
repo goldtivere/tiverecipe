@@ -1,16 +1,16 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.commands.UnitOfMeasureCommand;
-import guru.springframework.domain.Ingredient;
-import guru.springframework.domain.Recipe;
+
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.IngredientCommand;
+import tive.recipe.tiverecipe.commands.UnitOfMeasureCommand;
+import tive.recipe.tiverecipe.domain.Ingredient;
+import tive.recipe.tiverecipe.domain.Recipe;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class IngredientCommandToIngredientTest {
 
@@ -46,7 +46,7 @@ public class IngredientCommandToIngredientTest {
         command.setDescription(DESCRIPTION);
         UnitOfMeasureCommand unitOfMeasureCommand = new UnitOfMeasureCommand();
         unitOfMeasureCommand.setId(UOM_ID);
-        command.setUnitOfMeasure(unitOfMeasureCommand);
+        command.setUom(unitOfMeasureCommand);
 
         //when
         Ingredient ingredient = converter.convert(command);

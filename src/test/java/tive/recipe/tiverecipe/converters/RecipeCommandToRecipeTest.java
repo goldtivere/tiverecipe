@@ -1,16 +1,16 @@
 package tive.recipe.tiverecipe.converters;
 
-import guru.springframework.commands.CategoryCommand;
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.commands.NotesCommand;
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.domain.Difficulty;
-import guru.springframework.domain.Recipe;
+
 import org.junit.Before;
 import org.junit.Test;
+import tive.recipe.tiverecipe.commands.CategoryCommand;
+import tive.recipe.tiverecipe.commands.IngredientCommand;
+import tive.recipe.tiverecipe.commands.NotesCommand;
+import tive.recipe.tiverecipe.commands.RecipeCommand;
+import tive.recipe.tiverecipe.domain.Difficulty;
+import tive.recipe.tiverecipe.domain.Recipe;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class RecipeCommandToRecipeTest {
     public static final Long RECIPE_ID = 1L;
